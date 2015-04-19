@@ -3,7 +3,7 @@ using System.Collections;
 
 public class KeyboardMovement : MonoBehaviour {
 	private Rigidbody rigidbody;
-	private float speed = 250;
+	private float speed = 7.5f;
 
 	// Use this for initialization
 	void Start () {
@@ -12,14 +12,15 @@ public class KeyboardMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 moveDirection = new Vector3(Input.GetAxis ("Horizontal"),
+		Vector3 moveDirection = new Vector3(Input.GetAxis ("Vertical"),
 		                                    0,
-		                                    Input.GetAxis("Vertical")).normalized;
+		                                    -Input.GetAxis("Horizontal"));
+		moveDirection = Quaternion.AngleAxis (-45, Vector3.up) * moveDirection;
 		if (moveDirection != Vector3.zero) {
 			transform.forward = moveDirection;
 		}
-		rigidbody.velocity = new Vector3 (moveDirection.x * speed * Time.deltaTime, 
+		rigidbody.velocity = new Vector3 (moveDirection.x * speed, 
 		                                  rigidbody.velocity.y, 
-		                                  moveDirection.z * speed * Time.deltaTime);
+		                                  moveDirection.z * speed);
 	}
 }
