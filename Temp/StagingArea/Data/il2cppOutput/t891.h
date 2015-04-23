@@ -1,0 +1,73 @@
+﻿#pragma once
+#include <stdint.h>
+struct t18;
+struct t455;
+struct t891;
+struct t886;
+struct t64;
+struct t455;
+#include "t28.h"
+#include "t893.h"
+struct t891  : public t28
+{
+	bool f10;
+	t18* f11;
+	t18* f12;
+	t18* f13;
+	t18* f14;
+	t18* f15;
+	t18* f16;
+	t18* f17;
+	t18* f18;
+	t18* f19;
+	t18* f20;
+	t18* f21;
+	t18* f22;
+	t18* f23;
+	t18* f24;
+	int32_t f25;
+	t886 * f26;
+	int32_t f27;
+	t455* f28;
+	t455* f29;
+	t455* f30;
+	t455* f31;
+	t455* f32;
+	t455* f33;
+	t455* f34;
+	t455* f35;
+	t455* f36;
+	t455* f37;
+	t455* f38;
+	int32_t f39;
+	bool f40;
+	bool f41;
+	int32_t f42;
+	bool f43;
+	t18* f44;
+	t18* f45;
+	t455* f46;
+	t455* f47;
+	t455* f48;
+	t455* f49;
+	t64* f50;
+	t455* f51;
+	t455* f52;
+	t455* f53;
+	t455* f54;
+	int32_t f55;
+	t18* f56;
+	t455* f57;
+};
+struct t891_SFs{
+	t18* f0;
+	t18* f1;
+	t18* f2;
+	t18* f3;
+	t455* f4;
+	t455* f5;
+	t455* f6;
+	t455* f7;
+	t455* f8;
+	t891 * f9;
+};

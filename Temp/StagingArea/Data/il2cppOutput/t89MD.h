@@ -1,0 +1,13 @@
+﻿#pragma once
+#include <stdint.h>
+#include <assert.h>
+#include <exception>
+#include "codegen/il2cpp-codegen.h"
+
+struct t89;
+struct t28;
+struct t76;
+struct t90;
+struct t91;
+#include "t49.h"
+

@@ -5,6 +5,8 @@ public class Triangle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		DestroyImmediate (gameObject.GetComponent<MeshFilter> ());
+
 		MeshFilter filter = gameObject.AddComponent<MeshFilter> ();
 
 		Vector3[] vertices = new Vector3[] {	new Vector3(0,0,1),
@@ -28,7 +30,16 @@ public class Triangle : MonoBehaviour {
 			0,2,5,
 			0,1,2};
 
-		MeshRenderer renderer = gameObject.AddComponent<MeshRenderer> ();
+		Vector2[] uvs = new Vector2[] {
+			new Vector2 (0, 1),
+			new Vector2 (1, 1),
+			new Vector2 (1, 1),
+			new Vector2 (0, 0),
+			new Vector2 (1, 0),
+			new Vector2 (1, 0)
+		};
+		filter.mesh.uv = uvs;
+
 		gameObject.AddComponent<MeshCollider> ();
 	}
 	

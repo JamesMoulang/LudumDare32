@@ -1,0 +1,50 @@
+﻿#pragma once
+#include <stdint.h>
+struct t18;
+struct t64;
+struct t455;
+#include "t28.h"
+struct t714  : public t28
+{
+	bool f0;
+	t18* f1;
+	t18* f2;
+	t18* f3;
+	t18* f4;
+	t18* f5;
+	int32_t f6;
+	t18* f7;
+	t18* f8;
+	t64* f9;
+	int32_t f10;
+	int32_t f11;
+	t18* f12;
+	t18* f13;
+	t18* f14;
+	t18* f15;
+	int32_t f16;
+	t18* f17;
+	t18* f18;
+	t64* f19;
+	int32_t f20;
+	int32_t f21;
+	t18* f22;
+	t18* f23;
+	t64* f24;
+	int32_t f25;
+	int32_t f26;
+	t18* f27;
+	t18* f28;
+	t18* f29;
+	t18* f30;
+	t18* f31;
+	int32_t f32;
+	bool f33;
+	bool f34;
+	bool f35;
+	t455* f36;
+	int32_t f37;
+};
+struct t714_SFs{
+	t455* f38;
+};

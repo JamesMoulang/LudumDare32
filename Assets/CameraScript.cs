@@ -17,8 +17,8 @@ public class CameraScript : MonoBehaviour {
 	
 	}
 
-	public void Shake(Vector3 dir) {
-		shakenPosition = unshakenPosition - dir * shakeMagnitude;
+	public void Shake(Vector3 dir, float mag) {
+		shakenPosition = unshakenPosition - dir * shakeMagnitude * mag;
 		direction = dir;
 		returning = false;
 		shaking = true;
@@ -32,15 +32,12 @@ public class CameraScript : MonoBehaviour {
 			if (shaking) {
 				if ((Vector3.Distance (transform.position, shakenPosition) < 0.25f)) {
 					if (!returning) {
-						Debug.Log ("Shaking back");
 						returning = true;
 						shakenPosition = unshakenPosition;
 					} else {
-						Debug.Log ("Shaking over");
 						shaking = false;
 					}
 				} else {
-					Debug.Log ("Shaking there");
 					shakenPosition = unshakenPosition - direction * shakeMagnitude;
 					transform.position = Vector3.Lerp (transform.position, shakenPosition, 0.5f);
 				}
